@@ -1,0 +1,12 @@
+2022/07/12 23:20:35 profile: cpu profiling enabled, /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile2003018418/cpu.pprof
+2022/07/12 23:20:40 profile: cpu profiling disabled, /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile2003018418/cpu.pprof
+the result is:  5.062767698s
+
+2022/07/12 23:22:22 profile: memory profiling enabled (rate 4096), /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile362346778/mem.pprof
+the result is:  4.739188049s
+2022/07/12 23:22:27 profile: memory profiling disabled, /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile362346778/mem.pprof
+
+
+command to generate the graph
+go tool pprof --pdf sqlx_example /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile2003018418/cpu.pprof> cpuprofiling.pdf
+go tool pprof --pdf sqlx_example /var/folders/7x/yhw3mdn55nb4mt_qj8_jpp4r0000gn/T/profile362346778/mem.pprof> memoryprofiling.pdf
